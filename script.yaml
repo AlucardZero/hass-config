@@ -1,0 +1,35 @@
+away:
+  alias: away
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: group.all_lights
+    - service: media_player.turn_off
+      data:
+        entity_id: group.kitchen_media
+
+get_home:
+  alias: "get home"
+  sequence:
+    # Cancel old off timer
+    - service: script.turn_off
+      data:
+        entity_id: "script.kitchen_off"
+    - service: homeassistant.turn_on
+      data:
+        entity_id: 
+          - group.all_lights
+    - service: script.turn_on
+      data:
+        entity_id: "script.kitchen_off"
+
+kitchen_off:
+  alias: "Turn off kitchen lamp(s) after 10 minutes"
+  sequence:
+    - delay:
+        minutes: 10
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - group.kitchen_lights
+

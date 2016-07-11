@@ -1,0 +1,11 @@
+home-assistant.db
+home-assistant.log
+OZW_Log.txt
+secrets.yaml
+__pycache__
+.HA_VERSION
+known_devices.yaml
+pyozw.sqlite
+deps
+zwscene.xml
+zwcfg_*

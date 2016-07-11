@@ -1,0 +1,65 @@
+- alias: Away Mode
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    state: 'not_home'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 1
+  action:
+    service: script.away
+
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.notify
+    data:
+      message: 'Update for Home Assistant is available.'
+
+- alias: 'Turn on light when I get home after sunset'
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+        after_offset: "-0:45:00"
+      - condition: state
+        entity_id: group.kitchen_lights
+        state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: "script.get_home"
+
+- alias: 'Notify about traffic'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.to_work_in
+    above: 15
+  condition: 
+    condition: and
+    conditions:
+      - condition: time
+        after: "08:15"
+        before: "09:15"
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.all_devices
+        state: home
+  action:
+    - service: notify.email
+      data:
+        message: "Commute is {{ states.sensor.to_work_in.attributes.duration_in_traffic }}."
+        title: "Seek alternate route to work"

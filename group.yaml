@@ -1,0 +1,91 @@
+Current Weather:
+ - sensor.pws_weather
+ - sensor.pws_feelslike_f
+ - sensor.pws_wind_string
+# - sensor.weather_precip
+
+Upcoming Weather:
+  - sensor.pws_tf_period_0_text
+
+Forecast:
+  - sensor.pws_tf_period_0_title
+  - sensor.pws_tf_period_0_text
+  - sensor.pws_tf_period_1_title
+  - sensor.pws_tf_period_1_text
+  - sensor.pws_tf_period_2_title
+  - sensor.pws_tf_period_2_text
+
+Kitchen Media:
+ - media_player.kitchen
+
+Currently:
+   - sensor.pws_observation_time
+   - sensor.pws_weather
+   - sensor.pws_temp_f
+   - sensor.pws_feelslike_f
+   - sensor.pws_relative_humidity
+   - sensor.pws_wind_string
+   - sensor.pws_pressure_in
+   - sensor.pws_visibility_mi
+   - sensor.pws_uv
+
+Tarkin:
+  entities:
+    - sensor.disk_use_
+    - sensor.ram_use
+    - sensor.swap_use
+    - sensor.cpu_use
+    - sensor.since_last_boot
+
+People:
+    - !secret device_tracker_1
+
+Lights:
+  - light.linear_unknown_type4754_id3038_level_2
+  - light.linear_unknown_type4754_id3038_level_5
+  - light.linear_unknown_type4754_id3038_level_6
+
+Kitchen Lights:
+  - light.linear_unknown_type4754_id3038_level_2
+  - light.linear_unknown_type4754_id3038_level_5
+
+Bedroom Lights:
+  - light.linear_unknown_type4754_id3038_level_6
+
+Links:
+  entities:
+    - weblink.graphs
+
+System Links:
+  entities:
+    - weblink.system_graphs
+
+System Info:
+  view: yes
+  entities:
+    - group.tarkin
+    - group.system_links
+
+Commute:
+  entities:
+    - sensor.to_work_in
+
+Weather:
+  view: yes
+  entities:
+    - group.currently
+    - camera.recent_radar
+    - group.forecast
+
+default_view:
+  view: yes
+  entities:
+    - group.kitchen_media
+    - group.kitchen_lights
+    - group.bedroom_lights
+    - group.people
+    - group.links
+    - group.current_weather
+    - group.upcoming_weather
+#    - group.commute
+    - updater.updater
