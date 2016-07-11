@@ -34,7 +34,7 @@
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination
   api_key: !secret google_travel_time_api_key
-  name: "To Work in"
+  name: "To work in"
   options:
     mode: "driving"
 

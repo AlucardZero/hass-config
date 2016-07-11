@@ -29,7 +29,7 @@ Currently:
    - sensor.pws_visibility_mi
    - sensor.pws_uv
 
-Tarkin:
+System:
   entities:
     - sensor.disk_use_
     - sensor.ram_use
@@ -63,7 +63,7 @@ System Links:
 System Info:
   view: yes
   entities:
-    - group.tarkin
+    - group.system
     - group.system_links
 
 Commute:
