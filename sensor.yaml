@@ -46,81 +46,58 @@
 #
      pws_weather:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.weather }}'
-     pws_stationid:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.station_id }}'
-     pws_location:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.display_location.full }}'
-     pws_elevation:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.observation_location.elevation }}'
+#     pws_stationid:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.station_id }}'
+#     pws_location:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.display_location.full }}'
+#     pws_elevation:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.observation_location.elevation }}'
      pws_uv:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.UV }}'
      pws_observation_time:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.observation_time_rfc822 }}'
      pws_relative_humidity:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.relative_humidity }}'
-     pws_wind_degrees:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_degrees }}'
-     pws_wind_dir:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_dir }}'
+#     pws_wind_degrees:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_degrees }}'
+#     pws_wind_dir:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_dir }}'
      pws_wind_string:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_string }}'
-     pws_dewpoint_string:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.dewpoint_string }}'
-     pws_feelslike_string:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.feelslike_string }}'
-     pws_heat_index_string:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.heat_index_string }}'
-     pws_precip_1hr_string:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_1hr_string }}'
-     pws_precip_today_string:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_today_string }}'
+#     pws_dewpoint_string:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.dewpoint_string }}'
+#     pws_feelslike_string:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.feelslike_string }}'
+#     pws_heat_index_string:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.heat_index_string }}'
+#     pws_precip_1hr_string:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_1hr_string }}'
+#     pws_precip_today_string:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_today_string }}'
 #
 #
 #  Fahrenheit/Imperial Measurements
 #
-     pws_dewpoint_f:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.dewpoint_f }}'
+#     pws_dewpoint_f:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.dewpoint_f }}'
      pws_temp_f:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.temp_f }}'
      pws_feelslike_f:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.feelslike_f }}'
-     pws_heat_index_f:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.heat_index_f }}'
-     pws_precip_1hr_in:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_1hr_in }}'
-     pws_precip_today_in:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_today_in }}'
+#     pws_heat_index_f:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.heat_index_f }}'
+#     pws_precip_1hr_in:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_1hr_in }}'
+#     pws_precip_today_in:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_today_in }}'
      pws_pressure_in:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.pressure_in }}'
      pws_visibility_mi:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.visibility_mi }}'
-     pws_wind_mph:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_mph }}'
-     pws_wind_gust_mph:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_gust_mph }}'
-#
-#   Celsius/Metric Measurements
-#
-     pws_dewpoint_c:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.dewpoint_c }}'
-     pws_temp_c:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.temp_c }}'
-     pws_feelslike_c:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.feelslike_c }}'
-     pws_heat_index_c:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.heat_index_c }}'
-     pws_wind_kph:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_kph }}'
-     pws_wind_gust_kph:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_gust_kph }}'
-     pws_precip_1hr_metric:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_1hr_metric }}'
-     pws_precip_today_metric:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.precip_today_metric }}'
-     pws_pressure_mb:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.pressure_mb }}'
-     pws_visibility_km:
-       value_template: '{{ states.sensor.weather_underground_pws.attributes.visibility_km }}'
+#     pws_wind_mph:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_mph }}'
+#     pws_wind_gust_mph:
+#       value_template: '{{ states.sensor.weather_underground_pws.attributes.wind_gust_mph }}'
     # Forecast
      pws_tf_period_0_text:
         value_template: '{{ states.sensor.weather_underground_pws.attributes.txt_forecast.forecastday.0.fcttext }}'
