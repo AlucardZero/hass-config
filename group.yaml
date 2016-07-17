@@ -1,12 +1,14 @@
+# Short weather
 Current Weather:
  - sensor.pws_weather
  - sensor.pws_feelslike_f
  - sensor.pws_wind_string
-# - sensor.weather_precip
 
+# Short forecast
 Upcoming Weather:
   - sensor.pws_tf_period_0_text
 
+# Long forecast
 Forecast:
   - sensor.pws_tf_period_0_title
   - sensor.pws_tf_period_0_text
@@ -18,6 +20,7 @@ Forecast:
 Kitchen Media:
  - media_player.kitchen
 
+# Long weather
 Currently:
    - sensor.pws_observation_time
    - sensor.pws_weather
