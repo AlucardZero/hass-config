@@ -1,18 +1,19 @@
-sensor.weather_temperature:
- friendly_name: Outside Temperature
-sensor.weather_summary:
- friendly_name: Currently
-sensor.weather_hourly_summary:
- friendly_name: Next 24
-sensor.weather_precip:
- friendly_name: Precipitation Type
-sensor.weather_precip_intensity:
- friendly_name: Precipitation Intensity
-sensor.weather_precip_probability:
- friendly_name: Probability of Precipitation
-sensor.weather_wind_speed:
- friendly_name: Wind
- icon: mdi:weather-windy-variant
+# Forecast.io
+#sensor.weather_temperature:
+# friendly_name: Outside Temperature
+#sensor.weather_summary:
+# friendly_name: Currently
+#sensor.weather_hourly_summary:
+# friendly_name: Next 24
+#sensor.weather_precip:
+# friendly_name: Precipitation Type
+#sensor.weather_precip_intensity:
+# friendly_name: Precipitation Intensity
+#sensor.weather_precip_probability:
+# friendly_name: Probability of Precipitation
+#sensor.weather_wind_speed:
+# friendly_name: Wind
+# icon: mdi:weather-windy-variant
 
 sensor.disk_use_:
  friendly_name: Disk Used
@@ -93,7 +94,6 @@ sensor.pws_wind_degrees:
    icon: mdi:apple-safari
 
 # Farenheit/Imperial
-#
 sensor.pws_dewpoint_f:
    friendly_name: Dew Point (°F)
    icon: mdi:oil-temperature
@@ -125,38 +125,6 @@ sensor.pws_wind_gust_mph:
    friendly_name: Wind Gust Speed (MPH)
    icon: mdi:speedometer
 
-# Celsius/Metric
-#
-sensor.pws_dewpoint_c:
-   friendly_name: Dew Point C
-   icon: mdi:oil-temperature
-sensor.pws_temp_c:
-   friendly_name: Temperature C
-   icon: mdi:thermometer
-sensor.pws_feelslike_c:
-   friendly_name: Feels Like C
-   icon: mdi:account-alert
-sensor.pws_heat_index_c:
-   friendly_name: Heat Index C
-   icon: mdi:thermometer-lines
-sensor.pws_precip_1hr_metric:
-   friendly_name: Precip Last Hour mm
-   icon: mdi:cup-water
-sensor.pws_precip_today_metric:
-   friendly_name: Precip Today mm
-   icon: mdi:water
-sensor.pws_pressure_mb:
-   friendly_name: Barometric Pressure mb
-   icon: mdi:nature
-sensor.pws_visibility_km:
-   friendly_name: Visibility km
-   icon: mdi:weather-fog
-sensor.pws_wind_kph:
-   friendly_name: Sustained Wind Speed kph
-   icon: mdi:weather-windy
-sensor.pws_wind_gust_kph:
-   friendly_name: Wind Gust Speed kph
-   icon: mdi:speedometer
 sensor.pws_tf_period_0_text:
    friendly_name: What
    icon: mdi:chevron-double-right
