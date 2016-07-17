@@ -17,6 +17,7 @@ script: !include script.yaml
 
 recorder:
   purge_days: 14
+  db_url: !secret recorder_db_url
 
 logger:
   default: info
@@ -125,7 +126,7 @@ zwave:
   usb_path: /dev/zwave
  # config_path: /home/hass/home-assistant/lib/python3.4/site-packages/libopenzwave-0.3.0b8-py3.4-linux-x86_64.egg/config
   config_path: /home/hass/home-assistant/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-x86_64.egg/config
-  polling_interval: 60000
+  polling_interval: 90000
   customize:
     # Kitchen right
     light.linear_unknown_type4754_id3038_level_2:
