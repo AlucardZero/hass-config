@@ -32,7 +32,7 @@
         after: sunset
         after_offset: "-0:45:00"
       - condition: state
-        entity_id: group.kitchen_lights
+        entity_id: group.bedroom_lights
         state: 'off'
   action:
     service: homeassistant.turn_on
