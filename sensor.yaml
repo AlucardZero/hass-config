@@ -1,4 +1,4 @@
-# weather
+# forecast.io
 #- platform: forecast
 #  api_key: !secret forecast_api_key
 #  monitored_conditions:
@@ -10,15 +10,16 @@
 ##      - precip_probability
 #      - hourly_summary
 
+# Weather Underground instead
 - platform: wunderground
   api_key: !secret wunderground_api_key
   pws_id: !secret wunderground_pws_id
 
-- platform: template
-  sensors:
-     next24:
-       value_template: '{{ states("sensor.weather_hourly_summary") | lower }}'
-       friendly_name: 'Next 24'
+#- platform: template
+#  sensors:
+#     next24:
+#       value_template: '{{ states("sensor.weather_hourly_summary") | lower }}'
+#       friendly_name: 'Next 24'
 
 - platform: systemmonitor
   scan_interval: 300
@@ -38,12 +39,9 @@
   options:
     mode: "driving"
 
-# WUND
+# WUND templates
 -  platform: template
    sensors:
-#
-#  WeatherUnderground Shared Sensors
-#
      pws_weather:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.weather }}'
 #     pws_stationid:
