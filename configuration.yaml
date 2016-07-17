@@ -30,7 +30,7 @@ http:
         server_port: 8123
         ssl_certificate: !secret http_ssl_certificate
         ssl_key: !secret http_ssl_key
-#        api_password: !secret http_api_password:
+#        api_password: !secret http_api_password
 
 mqtt:
         broker: !secret mqtt_broker
@@ -113,6 +113,7 @@ media_player:
   hosts: 
         - 10.0.1.60 # Kitchen
 
+# Some links to some Grafana dashboards
 weblink:
   entities:
     - name: Graphs
@@ -144,6 +145,8 @@ notify:
   sender: !secret notify_sender
   recipient: !secret notify_recipient
 
+# Weather radar from Weather Underground. Retrieved via cron
+# https://community.home-assistant.io/t/is-anyone-doing-anything-with-weather-underground/763/101
 camera:
     platform: local_file
     file_path: /home/hass/weather.gif
