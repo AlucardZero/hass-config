@@ -106,6 +106,7 @@ logbook:
 
 # Track the sun
 sun:
+  scan_interval: 60
 
 media_player:
   platform: sonos
