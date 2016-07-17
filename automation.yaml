@@ -5,7 +5,7 @@
     state: 'not_home'
     for:
       hours: 0
-      minutes: 5
+      minutes: 10
       seconds: 1
   action:
     service: script.away
