@@ -91,6 +91,7 @@ influxdb:
     - light.linear_unknown_type4754_id3038_level_2
     - light.linear_unknown_type4754_id3038_level_5
     - light.linear_unknown_type4754_id3038_level_6
+    - light.linear_unknown_type4754_id3038_level_10
 
 # Enables the frontend
 frontend:
@@ -136,6 +137,8 @@ zwave:
     light.linear_unknown_type4754_id3038_level_5:
       polling_intensity: 1
     light.linear_unknown_type4754_id3038_level_6:
+      polling_intensity: 1
+    light.linear_unknown_type4754_id3038_level_10:
       polling_intensity: 1
 
 notify:

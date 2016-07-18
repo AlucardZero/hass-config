@@ -47,6 +47,7 @@ Lights:
   - light.linear_unknown_type4754_id3038_level_2
   - light.linear_unknown_type4754_id3038_level_5
   - light.linear_unknown_type4754_id3038_level_6
+  - light.linear_unknown_type4754_id3038_level_10
 
 Kitchen Lights:
   - light.linear_unknown_type4754_id3038_level_2
@@ -54,6 +55,7 @@ Kitchen Lights:
 
 Bedroom Lights:
   - light.linear_unknown_type4754_id3038_level_6
+  - light.linear_unknown_type4754_id3038_level_10
 
 Links:
   entities:

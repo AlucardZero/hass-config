@@ -36,7 +36,8 @@ light.linear_unknown_type4754_id3038_level_5:
   friendly_name: Servers
 light.linear_unknown_type4754_id3038_level_6:
   friendly_name: Dresser
-
+light.linear_unknown_type4754_id3038_level_10:
+  friendly_name: Desk
 group.lights:
    hidden: true
 
