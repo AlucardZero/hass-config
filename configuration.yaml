@@ -72,6 +72,8 @@ influxdb:
   password: !secret influxdb_password
   blacklist:
     - sensor.weather_summary
+    - sensor.weather_hourly_summary
+    - sensor.next24
     - sun.sun
     - updater.updater
     - weblink.graphs
@@ -88,10 +90,21 @@ influxdb:
     - group.lights
     - group.people
     - light.__level_2
+    - light.__level_10
+    - light.__level_5
+    - light.__level_6
     - light.linear_unknown_type4754_id3038_level_2
     - light.linear_unknown_type4754_id3038_level_5
     - light.linear_unknown_type4754_id3038_level_6
     - light.linear_unknown_type4754_id3038_level_10
+    - camera.recent_radar
+    - sensor.pws_tf_period_0_text
+    - sensor.pws_tf_period_0_title
+    - sensor.pws_tf_period_1_text
+    - sensor.pws_tf_period_1_title
+    - sensor.pws_tf_period_2_text
+    - sensor.pws_tf_period_2_title
+    - sensor.pws_stationid
 
 # Enables the frontend
 frontend:
