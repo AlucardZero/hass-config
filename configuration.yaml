@@ -181,3 +181,5 @@ camera:
     platform: local_file
     file_path: /home/hass/weather.gif
     name: Recent Radar
+
+input_boolean: !include input_boolean.yaml

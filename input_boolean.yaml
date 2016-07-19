@@ -1,0 +1,9 @@
+vacation:
+  name: Vacation Mode
+  initial: off
+  icon: mdi:beach
+
+automation_override:
+  name: Disable Automation
+  initial: off
+  icon: mdi:stop

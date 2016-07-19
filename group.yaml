@@ -65,11 +65,16 @@ System Links:
   entities:
     - weblink.system_graphs
 
+Toggles:
+  - input_boolean.vacation
+  - input_boolean.automation_override
+
 System Info:
   view: yes
   entities:
     - group.system
     - group.system_links
+    - group.toggles
 
 Commute:
   entities:
