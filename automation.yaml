@@ -89,6 +89,9 @@
       - condition: state
         entity_id: input_boolean.vacation
         state: 'on'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
   action:
       service: homeassistant.turn_on
       entity_id: group.bedroom_lights
@@ -103,6 +106,9 @@
       - condition: state
         entity_id: input_boolean.vacation
         state: 'on'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
   action:
       service: homeassistant.turn_off
       entity_id: group.bedroom_lights
