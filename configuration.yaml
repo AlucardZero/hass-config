@@ -21,6 +21,8 @@ recorder:
 
 logger:
   default: info
+  logs:
+    homeassistant.components.device_tracker.mqtt: debug
 
 # Discover some devices automatically
 discovery:
