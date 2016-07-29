@@ -80,6 +80,10 @@ Commute:
   entities:
     - sensor.to_work_in
 
+Bedroom Thermostat:
+  entities:
+    - thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+
 Weather:
   view: yes
   entities:
@@ -90,6 +94,7 @@ Weather:
 default_view:
   view: yes
   entities:
+    - group.bedroom_thermostat
     - group.kitchen_media
     - group.kitchen_lights
     - group.bedroom_lights
