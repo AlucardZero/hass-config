@@ -39,9 +39,14 @@
   options:
     mode: "driving"
 
+- platform: template
+  sensors:
+    bed_therm_mode:
+      value_template: '{{ states.thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.current_operation }}'
+
 # WUND templates
--  platform: template
-   sensors:
+- platform: template
+  sensors:
      pws_weather:
        value_template: '{{ states.sensor.weather_underground_pws.attributes.weather }}'
 #     pws_stationid:

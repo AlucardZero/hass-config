@@ -151,3 +151,6 @@ sensor.stelpro_stzw402_electronic_thermostat_temperature_11:
 thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11:
   friendly_name: Target
   icon: mdi:target
+sensor.bed_therm_mode:
+  friendly_name: Mode
+  icon: mdi:thermometer-lines
