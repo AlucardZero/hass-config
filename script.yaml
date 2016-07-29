@@ -12,7 +12,7 @@ away:
         entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
         temperature: 55
 
-get_home:
+get_home_sunset:
   alias: "get home"
   sequence:
     # Cancel old off timer
