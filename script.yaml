@@ -7,6 +7,10 @@ away:
     - service: media_player.turn_off
       data:
         entity_id: group.kitchen_media
+    - service: thermostat.set_temperature
+      data:
+        entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+        temperature: 55
 
 get_home:
   alias: "get home"
