@@ -186,3 +186,11 @@ camera:
     name: Recent Radar
 
 input_boolean: !include input_boolean.yaml
+
+proximity:
+  zone: home
+  ignored_zones:
+    - work
+  devices:
+    - device_tracker.all_devices
+  tolerance: 250
