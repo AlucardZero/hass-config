@@ -12,6 +12,14 @@ away:
         entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
         temperature: 55
 
+home:
+  alias: "generic home"
+  sequence:
+    - service: thermostat.set_temperature
+      data:
+        entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+        temperature: 70
+
 get_home_sunset:
   alias: "get home"
   sequence:

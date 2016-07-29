@@ -25,6 +25,15 @@
     data:
       message: 'Update for Home Assistant is available.'
 
+- alias: 'Do things when I get home'
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'not_home'
+    to: 'home'
+  action:
+    service: script.home
+
 - alias: 'Turn on light when I get home after sunset'
   trigger:
     platform: state
