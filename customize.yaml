@@ -152,5 +152,8 @@ thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11:
   friendly_name: Target
   icon: mdi:target
 sensor.bed_therm_mode:
-  friendly_name: Mode
+  friendly_name: Status
   icon: mdi:thermometer-lines
+
+media_player.kitchen:
+  friendly_name: Kitchen Speakers
