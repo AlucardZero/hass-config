@@ -34,11 +34,59 @@
   condition:
     condition: and
     conditions:
-      - oondition: numeric_state
+      - condition: numeric_state
         entity_id: sensor.pws_feelslike_f
         below: 55
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
   action:
-    service: script.home
+    service: script.heat_occupied
+
+- alias: 'Set heat lower after bed'
+  trigger:
+    platform: state
+    entity_id: group.bedroom_lights
+    from: 'on'
+    to: 'off'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: "22:00"
+      - condition: state
+        entity_id: group.all_devices
+        state: home
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: script.heat_bed
+
+- alias: 'Set heat higher in the morning'
+  trigger:
+    platform: time
+    after: "08:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.all_devices
+        state: home
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: script.heat_occupied
 
 - alias: 'Turn on light when I get home after sunset'
   trigger:
