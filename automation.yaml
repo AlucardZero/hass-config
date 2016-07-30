@@ -25,12 +25,18 @@
     data:
       message: 'Update for Home Assistant is available.'
 
-- alias: 'Do things when I get home'
+- alias: 'Set heat when I get home'
   trigger:
     platform: state
     entity_id: group.all_devices
     from: 'not_home'
     to: 'home'
+  condition:
+    condition: and
+    conditions:
+      - oondition: numeric_state
+        entity_id: sensor.pws_feelslike_f
+        below: 55
   action:
     service: script.home
 
