@@ -84,7 +84,10 @@ influxdb:
     - zone.work
     - media_player.kitchen
     - script.away
-    - script.get_home
+    - script.get_home_sunset
+    - script.heat_bed
+    - script.heat_occupied
+    - script.home
     - script.kitchen_off
     - sensor.date__time
     - group.all_devices
@@ -93,6 +96,10 @@ influxdb:
     - group.default_view
     - group.lights
     - group.people
+    - group.toggles
+    - group.system_info
+    - input_boolean.automation_override
+    - input_boolean.vacation
     - light.__level_2
     - light.__level_10
     - light.__level_5
@@ -120,6 +127,7 @@ influxdb:
     - sensor.pws_precip_today_string
     - sensor.pws_weather
     - sensor.pws_location
+    - sensor.bed_therm_mode
 
 # Enables the frontend
 frontend:
