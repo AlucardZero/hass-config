@@ -200,5 +200,5 @@ proximity:
   ignored_zones:
     - work
   devices:
-    - device_tracker.all_devices
+    - !secret device_tracker_1
   tolerance: 250
