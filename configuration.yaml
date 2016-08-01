@@ -151,16 +151,6 @@ media_player:
   hosts: 
         - 10.0.1.60 # Kitchen
 
-# Some links to some Grafana dashboards
-weblink:
-  entities:
-    - name: Graphs
-      url: !secret weblink_grafana_ha
-      icon: mdi:chart-line
-    - name: System Graphs
-      url: !secret weblink_grafana_sys
-      icon: mdi:settings
-
 zwave:
   usb_path: /dev/zwave
  # config_path: /home/hass/home-assistant/lib/python3.4/site-packages/libopenzwave-0.3.0b8-py3.4-linux-x86_64.egg/config
@@ -208,3 +198,11 @@ panel_iframe:
     title: Monitoring
     url: !secret monitor_url
     icon: mdi:bell
+  hagraphs:
+    title: Graphs
+    url: !secret weblink_grafana_ha
+    icon: mdi:chart-line
+  systemgraphs:
+    title: System Graphs
+    url: !secret weblink_grafana_sys
+    icon: mdi:chart-areaspline

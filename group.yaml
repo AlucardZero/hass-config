@@ -32,7 +32,7 @@ Currently:
    - sensor.pws_visibility_mi
    - sensor.pws_uv
 
-System:
+Measurements:
   entities:
     - sensor.disk_use_
     - sensor.ram_use
@@ -57,23 +57,14 @@ Bedroom Lights:
   - light.linear_unknown_type4754_id3038_level_6
   - light.linear_unknown_type4754_id3038_level_10
 
-Links:
-  entities:
-    - weblink.graphs
-
-System Links:
-  entities:
-    - weblink.system_graphs
-
 Toggles:
   - input_boolean.vacation
   - input_boolean.automation_override
 
-System Info:
+System:
   view: yes
   entities:
-    - group.system
-    - group.system_links
+    - group.measurements
     - group.toggles
 
 Commute:
@@ -100,7 +91,6 @@ default_view:
     - group.kitchen_lights
     - group.bedroom_lights
     - group.people
-    - group.links
     - group.current_weather
     - group.upcoming_weather
 #    - group.commute
