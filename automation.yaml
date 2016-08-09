@@ -35,8 +35,8 @@
     condition: and
     conditions:
       - condition: numeric_state
-        entity_id: sensor.pws_feelslike_f
-        below: 55
+        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+        below: 60
       - condition: state
         entity_id: input_boolean.vacation
         state: 'off'
@@ -58,6 +58,9 @@
       - condition: time
         after: "22:00:00"
         before: "05:00:00"
+      - condition: numeric_state
+        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+        below: 60
       - condition: state
         entity_id: group.all_devices
         state: 'home'
@@ -80,6 +83,9 @@
       - condition: state
         entity_id: group.all_devices
         state: 'home'
+      - condition: numeric_state
+        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+        below: 60
       - condition: state
         entity_id: input_boolean.vacation
         state: 'off'
@@ -142,6 +148,17 @@
       data:
         message: "Commute is {{ states.sensor.to_work_in.attributes.duration_in_traffic }}."
         title: "Seek alternate route to work"
+
+- alias: "Show near-term weather forecast"
+  trigger:
+    platform: state
+    entity_id: sensor.pws_tf_period_0_text
+  action:
+      service: persistent_notification.create
+      data:
+        title: "Upcoming Weather"
+        message: "{{ states.sensor.pws_tf_period_0_text.state }}"
+        notification_id: 2
 
 - alias: 'Vacation - Turn on lights at sunset'
   trigger:
