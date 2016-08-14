@@ -23,6 +23,7 @@ logger:
   default: info
   logs:
     homeassistant.components.device_tracker.mqtt: debug
+    homeassistant.components.device_tracker.owntracks: debug
 
 # Discover some devices automatically
 discovery:

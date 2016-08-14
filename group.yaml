@@ -38,6 +38,7 @@ Measurements:
     - sensor.ram_use
     - sensor.swap_use
     - sensor.cpu_use
+    - sensor.cpu_temperature
     - sensor.since_last_boot
 
 People:

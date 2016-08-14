@@ -31,6 +31,13 @@
    - type: processor_use
    - type: since_last_boot
 
+- platform: command_line
+  scan_interval: 300
+  name: "CPU Temperature"
+  command: "sensors -u k10temp-pci-00c3 | grep temp1_input: | awk '{print $2}'"
+#  unit_of_measurement: "°C"
+  value_template: '{{ (value | float * (9/5) + 32) | round(1) }}'
+
 - platform: google_travel_time
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination

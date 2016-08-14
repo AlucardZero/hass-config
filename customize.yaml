@@ -21,6 +21,9 @@ sensor.swap_use:
  icon: mdi:memory
 sensor.cpu_use:
  icon: mdi:monitor
+sensor.cpu_temperature:
+ icon: mdi:thermometer
+ friendly_name: "CPU Temp (°F)"
 sensor.since_last_boot:
  friendly_name: Uptime
  icon: mdi:timetable
