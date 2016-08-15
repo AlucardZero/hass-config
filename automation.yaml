@@ -1,4 +1,4 @@
-- alias: Away Mode
+- alias: 'Away Mode'
   trigger:
     platform: state
     entity_id: group.all_devices
@@ -116,6 +116,27 @@
   action:
     service: homeassistant.turn_on
     entity_id: "script.get_home_sunset"
+
+- alias: 'Turn on light near sunset when home'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:45:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.bedroom_lights
+        state: 'off'
+      - condition: state
+        entity_id: !secret device_tracker_1
+        state: 'home'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.bedroom_lights
 
 - alias: 'Notify about traffic'
   trigger:
