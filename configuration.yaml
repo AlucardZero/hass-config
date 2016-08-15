@@ -47,7 +47,7 @@ mqtt:
 
 device_tracker owntracks:
   platform: owntracks
-  max_gps_accuracy: 200
+  max_gps_accuracy: 250
   track_new_devices: no
  
 #device_tracker nmap:
