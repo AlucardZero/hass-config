@@ -5,11 +5,10 @@ homeassistant:
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
   elevation: 48
-  # C for Celcius, F for Fahrenheit
-  temperature_unit: F
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
   customize: !include customize.yaml
+  unit_system: imperial
 
 group: !include group.yaml
 zone: !include zones.yaml
@@ -73,6 +72,16 @@ influxdb:
   host: 127.0.0.1
   username: !secret influxdb_username
   password: !secret influxdb_password
+  whitelist:
+    - sensor.cpu_temperature
+    - thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+    - sensor.to_work_in
+    - sensor.pws_feelslike_f
+    - group.bedroom_lights
+    - sensor.cpu_use
+    - sensor.ram_use
+    - sensor.disk_use_
+    - sensor.swap_use
   blacklist:
     - sensor.weather_summary
     - sensor.weather_hourly_summary
@@ -193,6 +202,7 @@ proximity:
   devices:
     - !secret device_tracker_1
   tolerance: 250
+#  unit_of_measurement: mi
 
 panel_iframe:
   monitoring:
