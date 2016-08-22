@@ -106,7 +106,7 @@
     conditions:
       - condition: sun
         after: sunset
-        after_offset: "-0:45:00"
+        after_offset: "-0:55:00"
       - condition: state
         entity_id: group.bedroom_lights
         state: 'off'
