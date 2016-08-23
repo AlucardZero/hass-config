@@ -24,6 +24,7 @@ logger:
     homeassistant.components.device_tracker.mqtt: debug
     homeassistant.components.device_tracker.owntracks: debug
     homeassistant.components.proximity: debug
+    homeassistant.components.automation: info
 
 # Discover some devices automatically
 discovery:
