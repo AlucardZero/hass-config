@@ -10,7 +10,7 @@ away:
     - service: thermostat.set_temperature
       data:
         entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
-        temperature: 55
+        temperature: !secret heat_target_away
 
 heat_occupied:
   alias: "occupied heat"
@@ -18,7 +18,7 @@ heat_occupied:
     - service: thermostat.set_temperature
       data:
         entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
-        temperature: 70
+        temperature: !secret heat_target_occupied
 
 heat_bed:
   alias: "sleep heat"
@@ -26,7 +26,7 @@ heat_bed:
     - service: thermostat.set_temperature
       data:
         entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
-        temperature: 62
+        temperature: !secret heat_target_mid
 
 get_home_sunset:
   alias: "get home"
