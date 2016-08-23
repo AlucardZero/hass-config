@@ -1,0 +1,33 @@
+- alias: 'Vacation - Turn on lights at sunset'
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+      service: homeassistant.turn_on
+      entity_id: group.bedroom_lights
+
+- alias: 'Vacation - Turn off lights at 2200'
+  trigger:
+    platform: time
+    after: '22:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+      service: homeassistant.turn_off
+      entity_id: group.all_lights

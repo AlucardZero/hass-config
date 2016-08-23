@@ -1,0 +1,69 @@
+- alias: 'Away Mode'
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    state: 'not_home'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 1
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: script.away
+
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.notify
+    data:
+      message: 'Update for Home Assistant is available.'
+
+- alias: 'Notify about traffic'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.to_work_in
+    above: 15
+  condition: 
+    condition: and
+    conditions:
+      - condition: time
+        after: "08:15"
+        before: "09:15"
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.all_devices
+        state: 'home'
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    - service: notify.email
+      data:
+        message: "Commute is {{ states.sensor.to_work_in.attributes.duration_in_traffic }}."
+        title: "Seek alternate route to work"
+
+- alias: "Show near-term weather forecast"
+  trigger:
+    platform: state
+    entity_id: sensor.pws_tf_period_0_text
+  action:
+      service: persistent_notification.create
+      data:
+        title: "Upcoming Weather"
+        message: "{{ states.sensor.pws_tf_period_0_text.state }}"
+        notification_id: 2
