@@ -23,6 +23,7 @@ logger:
   logs:
     homeassistant.components.device_tracker.mqtt: debug
     homeassistant.components.device_tracker.owntracks: debug
+    homeassistant.components.proximity: debug
 
 # Discover some devices automatically
 discovery:
@@ -82,6 +83,7 @@ influxdb:
     - sensor.ram_use
     - sensor.disk_use_
     - sensor.swap_use
+    - proximity.home
   blacklist:
     - sensor.weather_summary
     - sensor.weather_hourly_summary
