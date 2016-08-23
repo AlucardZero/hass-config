@@ -76,6 +76,7 @@ influxdb:
   whitelist:
     - sensor.cpu_temperature
     - sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+    - thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
     - sensor.to_work_in
     - sensor.pws_feelslike_f
     - group.bedroom_lights
