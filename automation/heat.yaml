@@ -7,9 +7,9 @@
   condition:
     condition: and
     conditions:
-      - condition: numeric_state
-        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
-        below: 60
+#      - condition: numeric_state
+#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+#        below: 60
       - condition: state
         entity_id: input_boolean.vacation
         state: 'off'
@@ -31,9 +31,9 @@
       - condition: time
         after: "22:00:00"
         before: "05:00:00"
-      - condition: numeric_state
-        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
-        below: 60
+#      - condition: numeric_state
+#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+#        below: 60
       - condition: state
         entity_id: group.all_devices
         state: 'home'
@@ -56,9 +56,9 @@
       - condition: state
         entity_id: group.all_devices
         state: 'home'
-      - condition: numeric_state
-        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
-        below: 60
+#      - condition: numeric_state
+#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+#        below: 60
       - condition: state
         entity_id: input_boolean.vacation
         state: 'off'
@@ -67,3 +67,43 @@
         state: 'off'
   action:
     service: script.heat_occupied
+
+- alias: 'Turn heat up as I get closer to home'
+  trigger:
+    platform: numeric_state
+    entity_id: proximity.home
+    # 1-5 miles away
+    below: 5
+    above: 1
+  condition:
+    condition: and
+    conditions:
+
+        # Heading home
+      - condition: template
+        value_template: '{{ states.proximity.home.attributes.dir_of_travel == "towards" }}'
+
+        # Not already set
+      - condition: template
+        # TODO figure out how to use a variable
+        value_template: '{{ states.thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.temperature != 62 }}'
+
+        # Nobody home
+      - condition: state
+        entity_id: group.all_devices
+        state: 'not_home'
+
+        # Temp below target
+#      - condition: numeric_state
+#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+#        below: !secret heat_target_mid
+
+        # Automation enabled
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: thermostat.set_temperature
+    entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+    data:
+      temperature: !secret heat_target_mid
