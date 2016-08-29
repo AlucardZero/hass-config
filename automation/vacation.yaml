@@ -1,7 +1,8 @@
-- alias: 'Vacation - Turn on lights at sunset'
+- alias: 'Vacation - Turn on lights before sunset'
   trigger:
     platform: sun
     event: sunset
+    offset: "-00:35:00"
   condition:
     condition: and
     conditions:
