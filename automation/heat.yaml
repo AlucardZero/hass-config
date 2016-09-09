@@ -107,3 +107,33 @@
     entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
     data:
       temperature: !secret heat_target_mid
+
+# In case I get close and the above triggers, then go away
+- alias: 'Make sure heat is down when I am far away'
+  trigger:
+    platform: numeric_state
+    entity_id: proximity.home
+    above: 6
+  condition:
+    condition: and
+    conditions:
+        # Heading away
+      - condition: template
+        value_template: '{{ states.proximity.home.attributes.dir_of_travel != "towards" }}'
+        # Nobody home
+      - condition: state
+        entity_id: group.all_devices
+        state: 'not_home'
+        # Temp below target
+#      - condition: numeric_state
+#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
+#        above: !secret heat_target_away
+        # Automation enabled
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: thermostat.set_temperature
+    entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+    data:
+      temperature: !secret heat_target_away
