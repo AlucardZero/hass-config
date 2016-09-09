@@ -25,6 +25,7 @@ logger:
     homeassistant.components.device_tracker.owntracks: debug
     homeassistant.components.proximity: debug
     homeassistant.components.automation: info
+    homeassistant.components.sensor.aeotec_zw096_smart_switch_6_power_15: info
 
 # Discover some devices automatically
 discovery:
@@ -81,11 +82,16 @@ influxdb:
     - sensor.to_work_in
     - sensor.pws_feelslike_f
     - group.bedroom_lights
+    - group.kitchen_lights
     - sensor.cpu_use
     - sensor.ram_use
     - sensor.disk_use_
     - sensor.swap_use
     - proximity.home
+    - sensor.aeotec_zw096_smart_switch_6_energy_14
+    - sensor.aeotec_zw096_smart_switch_6_power_14
+    - sensor.aeotec_zw096_smart_switch_6_energy_15
+    - sensor.aeotec_zw096_smart_switch_6_power_15
 
 # Enables the frontend
 frontend:
@@ -113,7 +119,7 @@ zwave:
   usb_path: /dev/zwave
  # config_path: /home/hass/home-assistant/lib/python3.4/site-packages/libopenzwave-0.3.0b8-py3.4-linux-x86_64.egg/config
   config_path: /home/hass/home-assistant/lib/python3.5/site-packages/libopenzwave-0.3.1-py3.5-linux-x86_64.egg/config
-  polling_interval: 60000
+  polling_interval: 87654
   autoheal: false
   customize:
     # Kitchen right
@@ -125,6 +131,15 @@ zwave:
       polling_intensity: 1
     light.linear_unknown_type4754_id3038_level_10:
       polling_intensity: 1
+    sensor.aeotec_zw096_smart_switch_6_energy_14:
+      polling_intensity: 4
+    sensor.aeotec_zw096_smart_switch_6_power_14:
+      polling_intensity: 4
+    sensor.aeotec_zw096_smart_switch_6_energy_15:
+      polling_intensity: 4
+    sensor.aeotec_zw096_smart_switch_6_power_15:
+      polling_intensity: 4
+
 
 notify:
   name: email
