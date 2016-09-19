@@ -45,7 +45,7 @@ mqtt:
         username: !secret mqtt_username
         password: !secret mqtt_password
         protocol: 3.1
-        certificate: /home/hass/home-assistant/config/comodorsacertificationauthority.crt
+        certificate: /home/hass/home-assistant/config/identrust-root-and-lets-encrypt-x3.pem
 
 device_tracker owntracks:
   platform: owntracks
