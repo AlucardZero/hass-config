@@ -7,25 +7,25 @@ away:
     - service: media_player.turn_off
       data:
         entity_id: group.kitchen_media
-    - service: thermostat.set_temperature
+    - service: climate.set_temperature
       data:
-        entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
         temperature: !secret heat_target_away
 
 heat_occupied:
   alias: "occupied heat"
   sequence:
-    - service: thermostat.set_temperature
+    - service: climate.set_temperature
       data:
-        entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
         temperature: !secret heat_target_occupied
 
 heat_bed:
   alias: "sleep heat"
   sequence:
-    - service: thermostat.set_temperature
+    - service: climate.set_temperature
       data:
-        entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
         temperature: !secret heat_target_mid
 
 get_home_sunset:

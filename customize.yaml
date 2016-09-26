@@ -151,7 +151,7 @@ sensor.pws_tf_period_2_title:
 sensor.stelpro_stzw402_electronic_thermostat_temperature_11:
   friendly_name: Indoor Temp
   icon: mdi:temperature-fahrenheit
-thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11:
+climate.stelpro_stzw402_electronic_thermostat_heating_1_11:
   friendly_name: Target
   icon: mdi:target
 sensor.bed_therm_mode:
