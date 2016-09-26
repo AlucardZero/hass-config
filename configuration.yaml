@@ -125,7 +125,7 @@ zwave:
     # Kitchen right
     light.linear_unknown_type4754_id3038_level_2:
       polling_intensity: 1
-    light.linear_unknown_type4754_id3038_level_16:
+    light.linear_lb60z1_dimmable_led_light_bulb_level_17:
       polling_intensity: 1
     light.linear_unknown_type4754_id3038_level_6:
       polling_intensity: 1
