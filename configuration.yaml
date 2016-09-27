@@ -123,12 +123,11 @@ zwave:
   polling_interval: 87654
   autoheal: false
   customize:
-    # Kitchen right
     light.linear_unknown_type4754_id3038_level_2:
       polling_intensity: 1
     light.linear_lb60z1_dimmable_led_light_bulb_level_17:
       polling_intensity: 1
-    light.linear_unknown_type4754_id3038_level_6:
+    light.linear_lb60z1_dimmable_led_light_bulb_level_19:
       polling_intensity: 1
     light.linear_unknown_type4754_id3038_level_10:
       polling_intensity: 1
