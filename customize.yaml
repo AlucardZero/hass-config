@@ -148,7 +148,7 @@ sensor.pws_tf_period_2_title:
    friendly_name: When
    icon: mdi:calendar-clock
 
-sensor.stelpro_stzw402_electronic_thermostat_temperature_11:
+sensor.bed_therm_setting:
   friendly_name: Indoor Temp
   icon: mdi:temperature-fahrenheit
 climate.stelpro_stzw402_electronic_thermostat_heating_1_11:
