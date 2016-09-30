@@ -86,7 +86,7 @@
         # Not already set
       - condition: template
         # TODO figure out how to use a variable
-        value_template: '{{ states.thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.temperature != 62 }}'
+        value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.temperature != 62 }}'
 
         # Nobody home
       - condition: state
@@ -103,8 +103,8 @@
         entity_id: input_boolean.automation_override
         state: 'off'
   action:
-    service: thermostat.set_temperature
-    entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+    service: climate.set_temperature
+    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
     data:
       temperature: !secret heat_target_mid
 
@@ -133,7 +133,7 @@
         entity_id: input_boolean.automation_override
         state: 'off'
   action:
-    service: thermostat.set_temperature
-    entity_id: thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11
+    service: climate.set_temperature
+    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
     data:
       temperature: !secret heat_target_away
