@@ -125,7 +125,7 @@ zwave:
   customize:
     light.linear_unknown_type4754_id3038_level_2:
       polling_intensity: 1
-    light.linear_lb60z1_dimmable_led_light_bulb_level_17:
+    light.bedroomdressersw_level_20:
       polling_intensity: 1
     light.linear_lb60z1_dimmable_led_light_bulb_level_19:
       polling_intensity: 1
