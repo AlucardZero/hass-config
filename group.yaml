@@ -47,15 +47,15 @@ People:
 Lights:
   - light.linear_unknown_type4754_id3038_level_2
   - light.linear_lb60z1_dimmable_led_light_bulb_level_19
-  - light.linear_unknown_type4754_id3038_level_10
   - light.bedroomdressersw_level_20
+  - light.bedroomdeskswitc_level_21
 
 Kitchen Lights:
   - light.linear_unknown_type4754_id3038_level_2
   - light.linear_lb60z1_dimmable_led_light_bulb_level_19
 
 Bedroom Lights:
-  - light.linear_unknown_type4754_id3038_level_10
+  - light.bedroomdeskswitc_level_21
   - light.bedroomdressersw_level_20
 
 Toggles:
