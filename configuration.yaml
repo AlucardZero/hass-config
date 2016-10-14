@@ -24,7 +24,7 @@ logger:
     homeassistant.components.mqtt: debug
     homeassistant.components.device_tracker.owntracks: debug
     homeassistant.components.proximity: debug
-    homeassistant.components.zwave: debug
+    homeassistant.components.zwave: info
     homeassistant.components.automation: info
 #    homeassistant.components.sensor.aeotec_zw096_smart_switch_6_power_15: info
 
@@ -99,6 +99,10 @@ frontend:
 
 # View all events in a logbook
 logbook:
+   exclude:
+     domains:
+       - systemmonitor
+       - wunderground
 
 # Show links to resources in log and frontend
 #introduction:
