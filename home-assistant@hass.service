@@ -1,6 +1,6 @@
 [Unit]
 Description=Home Assistant
-After=network.target mysql.service grafana-server.service influxdb.service
+After=network.target influxdb.service mysql.service grafana-server.service
 
 [Service]
 Type=simple

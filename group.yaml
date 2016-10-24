@@ -94,6 +94,7 @@ default_view:
     - group.people
     - group.current_weather
     - persistent_notification.2
+    - persistent_notification.3
 #    - group.upcoming_weather
 #    - group.commute
-    - updater.updater
+#    - updater.updater

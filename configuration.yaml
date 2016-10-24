@@ -26,6 +26,7 @@ logger:
     homeassistant.components.proximity: debug
     homeassistant.components.zwave: info
     homeassistant.components.automation: info
+#    homeassistant.components.sensor.command_line: info
 #    homeassistant.components.sensor.aeotec_zw096_smart_switch_6_power_15: info
 
 # Discover some devices automatically

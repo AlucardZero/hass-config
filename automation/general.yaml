@@ -67,3 +67,14 @@
         title: "Upcoming Weather"
         message: "{{ states.sensor.pws_tf_period_0_text.state }}"
         notification_id: 2
+
+- alias: "Show today's calendar"
+  trigger:
+    platform: time
+    after: "04:00"
+  action:
+      service: persistent_notification.create
+      data:
+        title: "Today's Events"
+        message: "{{ states.sensor.calendar.state }}"
+        notification_id: 3

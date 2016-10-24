@@ -38,6 +38,11 @@
 #  unit_of_measurement: "°C"
   value_template: '{{ (value | float * (9/5) + 32) | round(1) }}'
 
+- platform: command_line
+  scan_interval: 900
+  name: "Calendar"
+  command: '/home/hass/.local/bin/gcalcli agenda --nocolor --detail_location 00:00 23:59'
+
 - platform: google_travel_time
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination
