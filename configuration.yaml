@@ -99,10 +99,6 @@ frontend:
 
 # View all events in a logbook
 logbook:
-   exclude:
-     domains:
-       - systemmonitor
-       - wunderground
 
 # Show links to resources in log and frontend
 #introduction:
