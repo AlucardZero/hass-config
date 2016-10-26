@@ -41,7 +41,7 @@
 - platform: command_line
   scan_interval: 900
   name: "Calendar"
-  command: '/home/hass/.local/bin/gcalcli agenda --nocolor --detail_location 00:00 23:59'
+  command: '/home/hass/home-assistant/config/format-gcal.sh'
 
 - platform: google_travel_time
   origin: !secret google_travel_time_origin
