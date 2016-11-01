@@ -49,7 +49,7 @@
 - alias: 'Set heat higher in the morning'
   trigger:
     platform: time
-    after: "07:40"
+    after: "07:35"
   condition:
     condition: and
     conditions:
