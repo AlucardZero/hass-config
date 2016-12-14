@@ -48,6 +48,8 @@ kitchen_off:
   sequence:
     - delay:
         minutes: 10
+    - condition: template
+      value_template: '{{ states.media_player.kitchen.state != "playing" }}'
     - service: homeassistant.turn_off
       data:
         entity_id:
