@@ -139,7 +139,7 @@
   sensors:
     kitchen_motion:
       value_template: >
-        {% if is_state('sensor.vision_zp3111_multisensor_4in1_burglar_26','8') %}
+        {% if is_state('sensor.vision_zp3111_multisensor_4in1_burglar_26_10','8') %}
           Yes
         {% else %}
           No
