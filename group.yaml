@@ -61,9 +61,9 @@ Kitchen:
   - light.linear_lb60z1_dimmable_led_light_bulb_level_19_0
   - light.linear_lb60z1_dimmable_led_light_bulb_level_22_0
   - sensor.kitchen_motion
-  - sensor.vision_zp3111_multisensor_4in1_luminance_26
-  - sensor.vision_zp3111_multisensor_4in1_relative_humidity_26
-  - sensor.vision_zp3111_multisensor_4in1_temperature_26
+  - sensor.vision_zp3111_multisensor_4in1_luminance_26_3
+  - sensor.vision_zp3111_multisensor_4in1_relative_humidity_26_5
+  - sensor.vision_zp3111_multisensor_4in1_temperature_26_1
 
 Bedroom Lights:
   - light.bedroomdeskswitc_level_21_0

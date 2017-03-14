@@ -169,11 +169,11 @@ media_player.kitchen:
 sensor.kitchen_motion:
   friendly_name: Motion Detected?
   icon: mdi:satellite-variant
-sensor.vision_zp3111_multisensor_4in1_luminance_26:
+sensor.vision_zp3111_multisensor_4in1_luminance_26_3:
   friendly_name: Luminance
   icon: mdi:sunglasses
-sensor.vision_zp3111_multisensor_4in1_relative_humidity_26:
+sensor.vision_zp3111_multisensor_4in1_relative_humidity_26_5:
   friendly_name: Humidity
   icon: mdi:water-percent
-sensor.vision_zp3111_multisensor_4in1_temperature_26:
+sensor.vision_zp3111_multisensor_4in1_temperature_26_1:
   friendly_name: Temperature
