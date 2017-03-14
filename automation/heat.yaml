@@ -46,19 +46,46 @@
   action:
     service: script.heat_bed
 
-- alias: 'Set heat higher in the morning'
+- alias: 'Set heat higher in the morning - weekday'
   trigger:
     platform: time
-    after: "07:35"
+    after: "07:30"
   condition:
     condition: and
     conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
       - condition: state
         entity_id: group.all_devices
         state: 'home'
-#      - condition: numeric_state
-#        entity_id: sensor.stelpro_stzw402_electronic_thermostat_temperature_11
-#        below: 60
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.automation_override
+        state: 'off'
+  action:
+    service: script.heat_occupied
+
+- alias: 'Set heat higher in the morning - weekend'
+  trigger:
+    platform: time
+    after: "09:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - sat
+          - sun
+      - condition: state
+        entity_id: group.all_devices
+        state: 'home'
       - condition: state
         entity_id: input_boolean.vacation
         state: 'off'
