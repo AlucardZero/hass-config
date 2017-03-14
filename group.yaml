@@ -45,29 +45,29 @@ People:
     - !secret device_tracker_1
 
 Lights:
-  - light.linear_unknown_type4754_id3038_level_2
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_19
-  - light.bedroomdressersw_level_20
-  - light.bedroomdeskswitc_level_21
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_22
+  - light.linear_unknown_type4754_id3038_level_2_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_19_0
+  - light.bedroomdressersw_level_20_0
+  - light.bedroomdeskswitc_level_21_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_22_0
 
 Kitchen Lights:
-  - light.linear_unknown_type4754_id3038_level_2
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_19
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_22
+  - light.linear_unknown_type4754_id3038_level_2_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_19_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_22_0
 
 Kitchen:
-  - light.linear_unknown_type4754_id3038_level_2
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_19
-  - light.linear_lb60z1_dimmable_led_light_bulb_level_22
+  - light.linear_unknown_type4754_id3038_level_2_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_19_0
+  - light.linear_lb60z1_dimmable_led_light_bulb_level_22_0
   - sensor.kitchen_motion
   - sensor.vision_zp3111_multisensor_4in1_luminance_26
   - sensor.vision_zp3111_multisensor_4in1_relative_humidity_26
   - sensor.vision_zp3111_multisensor_4in1_temperature_26
 
 Bedroom Lights:
-  - light.bedroomdeskswitc_level_21
-  - light.bedroomdressersw_level_20
+  - light.bedroomdeskswitc_level_21_0
+  - light.bedroomdressersw_level_20_0
 
 Toggles:
   - input_boolean.vacation
