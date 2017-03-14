@@ -130,3 +130,13 @@
         value_template: '{{ states.sensor.weather_underground_pws.attributes.txt_forecast.forecastday.2.fcttext }}'
      pws_tf_period_2_title:
         value_template: '{{ states.sensor.weather_underground_pws.attributes.txt_forecast.forecastday.2.title }}'
+
+- platform: template
+  sensors:
+    kitchen_motion:
+      value_template: >
+        {% if is_state('sensor.vision_zp3111_multisensor_4in1_burglar_26','8') %}
+          Yes
+        {% else %}
+          No
+        {% endif %}

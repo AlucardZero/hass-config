@@ -160,3 +160,15 @@ sensor.bed_therm_mode:
 
 media_player.kitchen:
   friendly_name: Kitchen Speakers
+
+sensor.kitchen_motion:
+  friendly_name: Motion Detected?
+  icon: mdi:satellite-variant
+sensor.vision_zp3111_multisensor_4in1_luminance_26:
+  friendly_name: Luminance
+  icon: mdi:sunglasses
+sensor.vision_zp3111_multisensor_4in1_relative_humidity_26:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.vision_zp3111_multisensor_4in1_temperature_26:
+  friendly_name: Temperature

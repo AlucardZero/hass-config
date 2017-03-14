@@ -140,7 +140,14 @@ zwave:
       polling_intensity: 4
     sensor.aeotec_zw096_smart_switch_6_power_15:
       polling_intensity: 4
-
+    sensor.vision_zp3111_multisensor_4in1_burglar_26:
+      polling_intensity: 2
+    sensor.vision_zp3111_multisensor_4in1_luminance_26:
+      polling_intensity: 2
+    sensor.vision_zp3111_multisensor_4in1_relative_humidity_26:
+      polling_intensity: 2
+    sensor.vision_zp3111_multisensor_4in1_temperature_26:
+      polling_intensity: 2
 
 notify:
   name: email
