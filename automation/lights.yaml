@@ -40,3 +40,21 @@
   action:
     service: homeassistant.turn_on
     entity_id: group.bedroom_lights
+
+- alias: 'Turn on stove light upon motion'
+  trigger:
+    platform: state
+    entity_id: sensor.vision_zp3111_multisensor_4in1_burglar_26
+    to: '8'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.linear_lb60z1_dimmable_led_light_bulb_level_22
+
+- alias: 'Turn off stove light upon no motion'
+  trigger:
+    platform: state
+    entity_id: sensor.vision_zp3111_multisensor_4in1_burglar_26
+    to: '0'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.linear_lb60z1_dimmable_led_light_bulb_level_22

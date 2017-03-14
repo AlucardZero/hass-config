@@ -34,9 +34,11 @@ sun.sun:
  hidden: true
 
 light.linear_unknown_type4754_id3038_level_2:
-  friendly_name: Door
+  friendly_name: Door Light
 light.linear_lb60z1_dimmable_led_light_bulb_level_19:
-  friendly_name: Server Rack
+  friendly_name: Server Rack Light
+light.linear_lb60z1_dimmable_led_light_bulb_level_22:
+  friendly_name: Stovetop Light
 light.bedroomdeskswitc_level_21:
   friendly_name: Desk
 light.bedroomdressersw_level_20:
