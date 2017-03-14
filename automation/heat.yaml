@@ -111,9 +111,9 @@
         value_template: '{{ states.proximity.home.attributes.dir_of_travel == "towards" }}'
 
         # Not already set
-      - condition: template
-        # TODO figure out how to use a variable
-        value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.temperature != 62 }}'
+#      - condition: template
+#        # TODO figure out how to use a variable
+#        value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1.attributes.temperature != 62 }}'
 
         # Nobody home
       - condition: state
@@ -131,7 +131,7 @@
         state: 'off'
   action:
     service: climate.set_temperature
-    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
+    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
     data:
       temperature: !secret heat_target_mid
 
@@ -161,6 +161,6 @@
         state: 'off'
   action:
     service: climate.set_temperature
-    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
+    entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
     data:
       temperature: !secret heat_target_away

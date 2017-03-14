@@ -9,7 +9,7 @@ away:
         entity_id: group.kitchen_media
     - service: climate.set_temperature
       data:
-        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
         temperature: !secret heat_target_away
 
 heat_occupied:
@@ -17,7 +17,7 @@ heat_occupied:
   sequence:
     - service: climate.set_temperature
       data:
-        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
         temperature: !secret heat_target_occupied
 
 heat_bed:
@@ -25,7 +25,7 @@ heat_bed:
   sequence:
     - service: climate.set_temperature
       data:
-        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11
+        entity_id: climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
         temperature: !secret heat_target_mid
 
 get_home_sunset:
