@@ -26,7 +26,6 @@ logger:
     homeassistant.components.proximity: debug
     homeassistant.components.zwave: info
     homeassistant.components.automation: info
-#    homeassistant.components.sensor.aeotec_zw096_smart_switch_6_power_15: info
 
 # Discover some devices automatically
 discovery:
@@ -89,17 +88,17 @@ influxdb:
     - sensor.bed_therm_setting
     - sensor.to_work_in
     - sensor.pws_feelslike_f
-    - group.bedroom_lights
-    - group.kitchen_lights
+#    - group.bedroom_lights
+#    - group.kitchen_lights
     - sensor.cpu_use
     - sensor.ram_use
     - sensor.disk_use_
     - sensor.swap_use
     - proximity.home
-    - sensor.aeotec_zw096_smart_switch_6_energy_14
-    - sensor.aeotec_zw096_smart_switch_6_power_14
-    - sensor.aeotec_zw096_smart_switch_6_energy_15
-    - sensor.aeotec_zw096_smart_switch_6_power_15
+    - sensor.aeotec_zw096_smart_switch_6_energy_14_0
+    - sensor.aeotec_zw096_smart_switch_6_power_14_8
+    - sensor.aeotec_zw096_smart_switch_6_energy_15_0
+    - sensor.aeotec_zw096_smart_switch_6_power_15_8
 
 # Enables the frontend
 frontend:
@@ -149,13 +148,13 @@ zwave:
       polling_intensity: 1
       refresh_value: true
       delay: 5
-    sensor.aeotec_zw096_smart_switch_6_energy_14:
+    sensor.aeotec_zw096_smart_switch_6_energy_14_0:
       polling_intensity: 4
-    sensor.aeotec_zw096_smart_switch_6_power_14:
+    sensor.aeotec_zw096_smart_switch_6_power_14_8:
       polling_intensity: 4
-    sensor.aeotec_zw096_smart_switch_6_energy_15:
+    sensor.aeotec_zw096_smart_switch_6_energy_15_0:
       polling_intensity: 4
-    sensor.aeotec_zw096_smart_switch_6_power_15:
+    sensor.aeotec_zw096_smart_switch_6_power_15_8:
       polling_intensity: 4
     sensor.vision_zp3111_multisensor_4in1_burglar_26_10:
       polling_intensity: 2
