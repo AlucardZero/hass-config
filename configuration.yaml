@@ -26,7 +26,6 @@ logger:
     homeassistant.components.proximity: debug
     homeassistant.components.zwave: info
     homeassistant.components.automation: info
-#    homeassistant.components.sensor.command_line: info
 #    homeassistant.components.sensor.aeotec_zw096_smart_switch_6_power_15: info
 
 # Discover some devices automatically
@@ -38,7 +37,12 @@ http:
         ssl_certificate: !secret http_ssl_certificate
         ssl_key: !secret http_ssl_key
 #        api_password: !secret http_api_password
-
+#        use_x_forwarded_for: true
+#        trusted_networks:
+#          - 10.0.1.0/24
+#          - 127.0.0.1
+#          - ::1
+#
 mqtt:
         broker: !secret mqtt_broker
         port: !secret mqtt_port
@@ -74,7 +78,9 @@ automation: !include_dir_merge_list automation/
 # Enables support for tracking state changes over time.
 #history:
 influxdb:
-  host: 127.0.0.1
+  host: !secret influxdb_host
+  ssl: true
+  port: 8085
   username: !secret influxdb_username
   password: !secret influxdb_password
   whitelist:
