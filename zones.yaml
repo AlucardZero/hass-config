@@ -1,12 +1,10 @@
-- zone Work:
+- name: !secret zone_work_name
   latitude: !secret zone_work_latitude
   longitude: !secret zone_work_longitude
-  name: !secret zone_work_name
   icon: mdi:worker
   radius: 350
 
-- zone Home:
-  name: Home
+- name: Home
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
   radius: 250
