@@ -128,17 +128,27 @@ zwave:
   config_path: /home/hass/home-assistant/lib/python3.5/site-packages/libopenzwave-0.3.1-py3.5-linux-x86_64.egg/config
   polling_interval: 123456
   autoheal: false
-  customize:
+  device_config:
     light.linear_unknown_type4754_id3038_level_2:
       polling_intensity: 1
+      refresh_value: true
+      delay: 5
     light.bedroomdressersw_level_20:
       polling_intensity: 1
+      refresh_value: true
+      delay: 5
     light.bedroomdeskswitc_level_21:
       polling_intensity: 1
+      refresh_value: true
+      delay: 5
     light.linear_lb60z1_dimmable_led_light_bulb_level_19:
       polling_intensity: 1
+      refresh_value: true
+      delay: 5
     light.linear_lb60z1_dimmable_led_light_bulb_level_22:
       polling_intensity: 1
+      refresh_value: true
+      delay: 5
     sensor.aeotec_zw096_smart_switch_6_energy_14:
       polling_intensity: 4
     sensor.aeotec_zw096_smart_switch_6_power_14:
