@@ -85,8 +85,8 @@ Commute:
 
 Bedroom Thermostat:
   entities:
-    - climate.stelpro_stzw402_electronic_thermostat_heating_1_11
-#    - sensor.bed_therm_mode
+    - climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1
+    - sensor.bed_therm_mode
 
 Weather:
   view: yes

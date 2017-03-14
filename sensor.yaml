@@ -51,14 +51,18 @@
   options:
     mode: "driving"
 
-#- platform: template
-#  sensors:
-#    bed_therm_mode:
-#      value_template: '{{ states.thermostat.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.current_operation }}'
+- platform: template
+  sensors:
+    bed_therm_mode:
+      value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1.attributes.operating_state[0] }}'
+- platform: template
+  sensors:
+    bed_therm_current:
+      value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1.attributes.current_temperature }}'
 - platform: template
   sensors:
     bed_therm_setting:
-      value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11.attributes.temperature }}'
+      value_template: '{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1.attributes.temperature }}'
 
 # WUND templates
 - platform: template

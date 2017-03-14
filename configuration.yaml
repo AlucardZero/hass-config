@@ -166,6 +166,9 @@ zwave:
     sensor.vision_zp3111_multisensor_4in1_temperature_26:
       polling_intensity: 2
 
+climate:
+  platform: zwave
+
 notify:
   name: email
   platform: smtp

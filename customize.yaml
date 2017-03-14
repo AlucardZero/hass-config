@@ -151,14 +151,17 @@ sensor.pws_tf_period_2_title:
    icon: mdi:calendar-clock
 
 sensor.bed_therm_setting:
-  friendly_name: Indoor Temp
-  icon: mdi:temperature-fahrenheit
-climate.stelpro_stzw402_electronic_thermostat_heating_1_11:
   friendly_name: Target
   icon: mdi:target
 sensor.bed_therm_mode:
   friendly_name: Status
   icon: mdi:thermometer-lines
+sensor.bed_therm_current:
+  friendly_name: Currently
+  icon: mdi:temperature-fahrenheit
+climate.stelpro_stzw402_electronic_thermostat_heating_1_11_1:
+  friendly_name: Stelpro STZW402+
+  icon: mdi:nest-thermostat
 
 media_player.kitchen:
   friendly_name: Kitchen Speakers
