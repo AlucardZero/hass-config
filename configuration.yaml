@@ -208,3 +208,7 @@ panel_iframe:
     title: System Graphs
     url: !secret weblink_grafana_sys
     icon: mdi:chart-areaspline
+
+google:
+  client_id: !secret gcal_client_id
+  client_secret: !secret gcal_client_secret

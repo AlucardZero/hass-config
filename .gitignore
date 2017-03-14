@@ -10,3 +10,5 @@ zwscene.xml
 zwcfg_*
 home-assistant_v2.db
 lets-encrypt-x3-cross-signed.pem
+google_calendars.yaml
+.google.token
