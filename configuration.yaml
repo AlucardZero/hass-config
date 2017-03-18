@@ -169,12 +169,21 @@ climate:
   platform: zwave
 
 notify:
-  name: email
-  platform: smtp
-  server: localhost
-  port: 25
-  sender: !secret notify_sender
-  recipient: !secret notify_recipient
+  - name: email
+    platform: smtp
+    server: localhost
+    port: 25
+    sender: !secret notify_sender
+    recipient: !secret notify_recipient
+  - name: discord
+    platform: discord
+    token: !secret discord_secret
+  - name: discord-home
+    platform: group
+    services:
+      - service: discord
+        data:
+          target: !secret discord_home_id
 
 # Weather radar from Weather Underground. Retrieved via cron
 # https://community.home-assistant.io/t/is-anyone-doing-anything-with-weather-underground/763/101
