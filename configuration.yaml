@@ -104,7 +104,7 @@ influxdb:
 frontend:
 
 # View all events in a logbook
-logbook:
+#logbook:
 
 # Show links to resources in log and frontend
 #introduction:
