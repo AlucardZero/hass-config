@@ -1,0 +1,41 @@
+- alias: 'Start notification'
+  trigger:
+    platform: event
+    event_type: homeassistant_start
+  action:
+    service: notify.discordhome
+    data:
+      message: "Home Assistant started"
+
+- alias: '1 Away'
+  trigger:
+    - platform: state
+      entity_id: !secret device_tracker_1
+      state: 'not_home'
+      for:
+        hours: 0
+        minutes: 10
+        seconds: 1
+  condition:
+      condition: state
+      entity_id: input_boolean.automation_override
+      state: 'off'
+  action:
+    service: notify.discordhome
+    data_template:
+      message: '1 is away'
+
+- alias: '1 Home'
+  trigger:
+    platform: state
+    entity_id: !secret device_tracker_1
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: state
+    entity_id: input_boolean.automation_override
+    state: 'off'
+  action:
+    service: notify.discordhome
+    data_template:
+      message: '1 is home'

@@ -53,7 +53,7 @@
         state: 'off'
   action:
     - service: notify.email
-      data:
+      data_template:
         message: "Commute is {{ states.sensor.to_work_in.attributes.duration_in_traffic }}."
         title: "Seek alternate route to work"
 
