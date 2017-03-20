@@ -21,9 +21,9 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.notify
-    data:
-      message: 'Update for Home Assistant is available.'
+    - service: notify.discordhome
+      data_template:
+        message: 'Home Assistant update available'
 
 - alias: 'Notify about traffic'
   trigger:
