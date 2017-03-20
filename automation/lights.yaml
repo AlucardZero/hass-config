@@ -55,6 +55,8 @@
     platform: state
     entity_id: sensor.vision_zp3111_multisensor_4in1_burglar_26_10
     to: '0'
+    for:
+      minutes: 2
   action:
     service: homeassistant.turn_off
     entity_id: light.linear_lb60z1_dimmable_led_light_bulb_level_22_0
