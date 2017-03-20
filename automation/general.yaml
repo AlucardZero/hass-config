@@ -72,10 +72,16 @@
   trigger:
     platform: time
     after: "04:00"
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.calendar.state != "" }}'
   action:
-      service: persistent_notification.create
+    - service: persistent_notification.create
       data:
         title: "Today's Agenda"
         message: >
           {{ states.sensor.calendar.state }}
         notification_id: 3
+    - service: notify.discordhome
+      data_template:
+        message: "Today's Agenda: {{ states.sensor.calendar.state }}"
